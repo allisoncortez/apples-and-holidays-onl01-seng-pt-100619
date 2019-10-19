@@ -38,9 +38,9 @@ def add_supply_to_memorial_day(holiday_hash, supply)
 
   # holiday_supplies[:spring].each do |key,value|
   #   value << supply
+  # end
   
-  holiday_supplies
-  end
+  holiday_hash[:spring][:memorial_day] << supply
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
@@ -48,6 +48,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
    
   end
   # remember to return the updated hash
+  holiday_hash
 end
 
 def all_winter_holiday_supplies(holiday_hash)
