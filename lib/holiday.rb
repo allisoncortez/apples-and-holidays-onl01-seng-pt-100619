@@ -65,8 +65,9 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
-  holiday_hash[:winter].each do |holiday, supply|
-    holiday << supply
+  holiday_hash[:winter].map do |holiday, supply|
+    if holiday 
+      holiday << supply
 end
 end
 
